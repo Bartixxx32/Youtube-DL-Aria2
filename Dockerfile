@@ -1,5 +1,6 @@
 FROM alpine:edge
 RUN uname -ar > /uname.build
+RUN apk add gcc g++ make libffi-dev openssl-dev
 RUN echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 RUN echo "**** install Python ****" && \
     apk add --no-cache python3 && \

@@ -11,7 +11,7 @@ RUN echo "**** install Python ****" && \
     pip3 install --no-cache --upgrade pip setuptools wheel && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi
 RUN apk update ; apk upgrade ; apk add --no-cache aria2 ffmpeg
-RUN pip3 install youtube-dl
+RUN pip3 install yt-dlp
 COPY yt_dl-docker.sh .
 RUN chmod +x yt_dl-docker.sh
 ENTRYPOINT ["sh", "yt_dl-docker.sh"]

@@ -1,5 +1,3 @@
-
-
 # YT-DL-ARIA2 Docker
 
 You can use this script to download youtube video via aria2.
